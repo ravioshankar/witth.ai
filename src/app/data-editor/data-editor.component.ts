@@ -13,16 +13,19 @@ import {
   MonacoEditorConstructionOptions,
   MonacoEditorLoaderService,
   MonacoStandaloneCodeEditor,
-} from '@materia-ui/ngx-monaco-editor';
+  filter,
+  take,
+} from 'rxjs';
+import GeoJSON from 'ol/format/GeoJSON';
 import { filter, take } from 'rxjs';
 import GeoJSON from 'ol/format/GeoJSON';
 
 @Component({
-    selector: 'app-data-editor',
-    templateUrl: './data-editor.component.html',
-    styleUrls: ['./data-editor.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+  selector: 'app-data-editor',
+  templateUrl: './data-editor.component.html',
+  styleUrls: ['./data-editor.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false
 })
 export class DataEditorComponent {
   @ViewChild(MonacoEditorComponent, { static: false })
