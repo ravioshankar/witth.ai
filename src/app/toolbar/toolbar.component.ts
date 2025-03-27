@@ -20,7 +20,7 @@ export class ToolbarComponent implements OnInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-  title = 'Attune';
+  title = 'Vitthai';
   readonly menuItems = [
     { link: '/home', label: 'Home', icon: null },
     { link: '/about', label: 'About', icon: null },

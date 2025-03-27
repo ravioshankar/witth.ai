@@ -1,11 +1,11 @@
 {
-  "name": "attune-reviewer",
+  "name": "vitthai",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve attune-reviewer --configuration=development --port 4300",
-    "build": "ng run attune-reviewer:build:production",
+    "start": "ng serve vitthai --configuration=development --port 4300",
+    "build": "ng run vitthai:build:production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng run attune-reviewer:test",
+    "test": "ng run vitthai:test",
     "postinstall": "node ./decorate-angular-cli.js",
     "prepare": "husky install",
     "doc:local": "compodoc -p ./tsconfig.compodoc.json -s -o -w",

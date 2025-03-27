@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "attune-reviewer": {
+    "vitthai": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/attune-reviewer"
+              "base": "dist/vitthai"
             },
             "index": "src/index.html",
             "polyfills": [
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "attune-reviewer:build:production"
+              "buildTarget": "vitthai:build:production"
             },
             "development": {
-              "buildTarget": "attune-reviewer:build:development"
+              "buildTarget": "vitthai:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "attune-reviewer:build"
+            "buildTarget": "vitthai:build"
           }
         },
         "test": {
