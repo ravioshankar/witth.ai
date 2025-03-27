@@ -18,10 +18,11 @@ import { filter, take } from 'rxjs';
 import GeoJSON from 'ol/format/GeoJSON';
 
 @Component({
-  selector: 'app-data-editor',
-  templateUrl: './data-editor.component.html',
-  styleUrls: ['./data-editor.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-data-editor',
+    templateUrl: './data-editor.component.html',
+    styleUrls: ['./data-editor.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class DataEditorComponent {
   @ViewChild(MonacoEditorComponent, { static: false })

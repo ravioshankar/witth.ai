@@ -14,9 +14,10 @@ import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 import Map from 'ol/Map';
 
 @Component({
-  selector: 'app-maps-dashboard',
-  templateUrl: './maps-dashboard.component.html',
-  styleUrls: ['./maps-dashboard.component.scss'],
+    selector: 'app-maps-dashboard',
+    templateUrl: './maps-dashboard.component.html',
+    styleUrls: ['./maps-dashboard.component.scss'],
+    standalone: false
 })
 export class MapsDashboardComponent {
   homePageMetaData: iHomePageData = structuredClone(homePageData);

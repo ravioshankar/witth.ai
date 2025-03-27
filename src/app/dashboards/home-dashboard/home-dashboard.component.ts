@@ -3,9 +3,10 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-home-dashboard',
-  templateUrl: './home-dashboard.component.html',
-  styleUrls: ['./home-dashboard.component.scss'],
+    selector: 'app-home-dashboard',
+    templateUrl: './home-dashboard.component.html',
+    styleUrls: ['./home-dashboard.component.scss'],
+    standalone: false
 })
 export class HomeDashboardComponent {
   /** Based on the screen size, switch from standard to one column per row */

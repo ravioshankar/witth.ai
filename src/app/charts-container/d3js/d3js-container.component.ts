@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
-  selector: 'app-d3js-container',
-  templateUrl: './d3js-container.component.html',
-  styleUrls: ['./d3js-container.component.scss'],
+    selector: 'app-d3js-container',
+    templateUrl: './d3js-container.component.html',
+    styleUrls: ['./d3js-container.component.scss'],
+    standalone: false
 })
 export class D3jsContainerComponent implements OnInit {
   private data = [

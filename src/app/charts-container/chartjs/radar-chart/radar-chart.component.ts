@@ -3,10 +3,11 @@ import { ChartType, Chart, ChartItem, ChartConfiguration } from 'chart.js';
 // import { Label } from 'ng2-charts';
 
 @Component({
-  selector: 'app-radar-chart',
-  templateUrl: './radar-chart.component.html',
-  styleUrls: ['./radar-chart.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-radar-chart',
+    templateUrl: './radar-chart.component.html',
+    styleUrls: ['./radar-chart.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class RadarChartComponent implements OnInit {
   constructor() {}

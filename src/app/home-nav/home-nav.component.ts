@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-home-nav',
-  templateUrl: './home-nav.component.html',
-  styleUrls: ['./home-nav.component.scss'],
+    selector: 'app-home-nav',
+    templateUrl: './home-nav.component.html',
+    styleUrls: ['./home-nav.component.scss'],
+    standalone: false
 })
 export class HomeNavComponent {
   isHandset$: Observable<boolean> = this.breakpointObserver

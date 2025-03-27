@@ -10,9 +10,10 @@ import { DOCUMENT } from '@angular/common';
 import { VennDiagramChart, extractSets } from 'chartjs-chart-venn';
 
 @Component({
-  selector: 'app-venn-chart',
-  templateUrl: './venn-chart.component.html',
-  styleUrls: ['./venn-chart.component.scss'],
+    selector: 'app-venn-chart',
+    templateUrl: './venn-chart.component.html',
+    styleUrls: ['./venn-chart.component.scss'],
+    standalone: false
 })
 export class VennChartComponent implements OnInit {
   private svg!: any;

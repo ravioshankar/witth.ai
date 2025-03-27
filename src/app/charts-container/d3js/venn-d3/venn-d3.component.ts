@@ -9,9 +9,10 @@ import {
 } from '@upsetjs/venn.js';
 
 @Component({
-  selector: 'app-venn-d3',
-  templateUrl: './venn-d3.component.html',
-  styleUrls: ['./venn-d3.component.scss'],
+    selector: 'app-venn-d3',
+    templateUrl: './venn-d3.component.html',
+    styleUrls: ['./venn-d3.component.scss'],
+    standalone: false
 })
 export class VennD3Component implements OnInit {
   chart: any;

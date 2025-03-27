@@ -10,9 +10,10 @@ import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 import Map from 'ol/Map';
 
 @Component({
-  selector: 'app-map-card',
-  templateUrl: './map-card.component.html',
-  styleUrls: ['./map-card.component.scss'],
+    selector: 'app-map-card',
+    templateUrl: './map-card.component.html',
+    styleUrls: ['./map-card.component.scss'],
+    standalone: false
 })
 export class MapCardComponent implements OnInit {
   map!: Map;

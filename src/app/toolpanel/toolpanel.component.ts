@@ -7,10 +7,11 @@ import {
 import GeoJSON from 'ol/format/GeoJSON';
 
 @Component({
-  selector: 'app-toolpanel',
-  templateUrl: './toolpanel.component.html',
-  styleUrls: ['./toolpanel.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-toolpanel',
+    templateUrl: './toolpanel.component.html',
+    styleUrls: ['./toolpanel.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ToolpanelComponent implements OnInit {
   panelOpenState = false;

@@ -13,9 +13,10 @@ import GeoJSON from 'ol/format/GeoJSON';
 import CircleStyle from 'ol/style/Circle';
 
 @Component({
-  selector: 'app-map-viewer',
-  templateUrl: './map-viewer.component.html',
-  styleUrls: ['./map-viewer.component.scss'],
+    selector: 'app-map-viewer',
+    templateUrl: './map-viewer.component.html',
+    styleUrls: ['./map-viewer.component.scss'],
+    standalone: false
 })
 export class MapViewerComponent implements OnInit {
   map: Map | undefined;

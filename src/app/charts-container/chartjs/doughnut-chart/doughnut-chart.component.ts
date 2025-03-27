@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Chart, ChartItem, ChartConfiguration } from 'chart.js';
 
 @Component({
-  selector: 'app-doughnut-chart',
-  templateUrl: './doughnut-chart.component.html',
-  styleUrls: ['./doughnut-chart.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-doughnut-chart',
+    templateUrl: './doughnut-chart.component.html',
+    styleUrls: ['./doughnut-chart.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class DoughnutChartComponent implements OnInit {
   constructor() {}
