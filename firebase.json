@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/attune-reviewer",
+    "public": "dist/vitthai",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
