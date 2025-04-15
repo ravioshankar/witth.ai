@@ -1,0 +1,16 @@
+/* filepath: src/app/about-me/about-me.component.scss */
+.about-me {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+
+  h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+}

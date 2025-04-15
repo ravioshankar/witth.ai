@@ -6,19 +6,18 @@ import {
   Routes,
   TitleStrategy,
 } from '@angular/router';
-import { AppComponent } from './app.component';
 import { ChartjsContainerComponent } from './charts-container/chartjs/chartjs-container.component';
 import { ChartsContainerComponent } from './charts-container/charts-container.component';
 import { D3jsContainerComponent } from './charts-container/d3js/d3js-container.component';
 import { HomeDashboardComponent } from './dashboards/home-dashboard/home-dashboard.component';
-import { MapViewerComponent } from './map-viewer/map-viewer.component';
 import { MapsDashboardComponent } from './dashboards/maps-dashboard/maps-dashboard.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const routes: Routes = [
-  { path: '', title: 'home dashboard', component: HomeDashboardComponent },
-
+  { path: '', title: 'about me', component: AboutMeComponent }, 
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'home', title: 'home dashboard', component: HomeDashboardComponent },
   { path: 'maps', title: 'maps dashboard', component: MapsDashboardComponent },
-
   {
     path: 'charts',
     title: 'chart view',
