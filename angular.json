@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vitthai": {
+    "witthai": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/vitthai"
+              "base": "dist/witthai"
             },
             "index": "src/index.html",
             "polyfills": [
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vitthai:build:production"
+              "buildTarget": "witthai:build:production"
             },
             "development": {
-              "buildTarget": "vitthai:build:development"
+              "buildTarget": "witthai:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "vitthai:build"
+            "buildTarget": "witthai:build"
           }
         },
         "test": {

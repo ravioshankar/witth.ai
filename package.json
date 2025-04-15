@@ -1,11 +1,11 @@
 {
-  "name": "vitthai",
+  "name": "witthai",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve vitthai --configuration=development --port 4300",
-    "build": "ng run vitthai:build:production",
+    "start": "ng serve witthai --configuration=development --port 4300",
+    "build": "ng run witthai:build:production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng run vitthai:test",
+    "test": "ng run witthai:test",
     "postinstall": "node ./decorate-angular-cli.js",
     "prepare": "husky install",
     "doc:local": "compodoc -p ./tsconfig.compodoc.json -s -o -w",

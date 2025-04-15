@@ -9,16 +9,11 @@ import {
 } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import {
-  MonacoEditorComponent,
-  MonacoEditorConstructionOptions,
-  MonacoEditorLoaderService,
-  MonacoStandaloneCodeEditor,
   filter,
   take,
 } from 'rxjs';
 import GeoJSON from 'ol/format/GeoJSON';
-import { filter, take } from 'rxjs';
-import GeoJSON from 'ol/format/GeoJSON';
+import { MonacoEditorComponent, MonacoEditorConstructionOptions, MonacoEditorLoaderService, MonacoStandaloneCodeEditor } from '@materia-ui/ngx-monaco-editor';
 
 @Component({
   selector: 'app-data-editor',
