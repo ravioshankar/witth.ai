@@ -12,12 +12,13 @@ import { D3jsContainerComponent } from './charts-container/d3js/d3js-container.c
 import { HomeDashboardComponent } from './dashboards/home-dashboard/home-dashboard.component';
 import { MapsDashboardComponent } from './dashboards/maps-dashboard/maps-dashboard.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { HomePageComponent } from './landing_pages/home-page/home-page.component';
 
 const routes: Routes = [
-  { path: '', title: 'about me', component: AboutMeComponent }, 
+  { path: '', title: 'Home', component: HomePageComponent }, 
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'home', title: 'home dashboard', component: HomeDashboardComponent },
-  { path: 'maps', title: 'maps dashboard', component: MapsDashboardComponent },
+  // { path: 'home', title: 'home dashboard', component: HomeDashboardComponent },
+  // { path: 'maps', title: 'maps dashboard', component: MapsDashboardComponent },
   {
     path: 'charts',
     title: 'chart view',

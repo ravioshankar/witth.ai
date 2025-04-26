@@ -1,0 +1,75 @@
+
+    <div class="mat-typography">
+      <mat-toolbar class="header primary">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#vibe-check">Vibe Check</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </mat-toolbar>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <h1 class="hero-title">Build Better Software, Faster</h1>
+            <p class="hero-description">Expert software consulting to drive your innovation and solve your toughest technical challenges.</p>
+            <a href="#contact" mat-raised-button color="accent">Get a Free Consultation</a>
+          </div>
+        </section>
+
+        <section id="services" class="services">
+          <div class="container">
+            <h2 class="section-title">Our Software Consulting Services</h2>
+            <div class="services-grid">
+              <mat-card *ngFor="let service of services" class="service-card">
+                <h3 class="service-title">{{ service.title }}</h3>
+                <p class="service-description">{{ service.description }}</p>
+              </mat-card>
+            </div>
+          </div>
+        </section>
+
+
+<section id="expertise" class="expertise">
+    <div class="container">
+      <h2 class="section-title">Deep Expertise Across Technologies</h2>
+  
+      <mat-chip-listbox class="expertise-chips-container" aria-label="Technology expertise" multiple> <!-- Allow multiple selections if desired -->
+        <mat-chip-option *ngFor="let tech of expertiseItems"
+           class="expertise-chip"
+           [value]="tech"
+           [selected]="isHighlighted(tech)"  
+           (click)="toggleHighlight(tech)"
+           [ngClass]="{'chip-highlighted': isHighlighted(tech)}"> <!-- Add conditional class -->
+           {{ tech }}
+        </mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+  </section>
+  
+
+        <section id="vibe-check" class="vibe-check">
+          <div class="container">
+            <h2 class="section-title">Stuck on a Coding Challenge? Let's Debug Together.</h2>
+            <p class="vibe-check-description">Facing a tricky bug or a complex coding problem? Our experts can help you identify the root cause and implement effective solutions. Get unstuck and get back to building.</p>
+            <a href="#contact" mat-raised-button color="accent">Request Debugging Assistance</a>
+          </div>
+        </section>
+
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2 class="section-title">Ready to Elevate Your Software?</h2>
+            <a href="#" mat-raised-button color="primary" class="contact-button">Contact Us Today</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          &copy; {{ currentYear }} Elevate Software. All rights reserved.
+        </div>
+      </footer>
+    </div>

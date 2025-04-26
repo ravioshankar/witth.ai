@@ -1,0 +1,233 @@
+// /home/ravio/workspace/witth.ai/src/app/landing_pages/home-page/home-page.component.scss
+
+// --- Material Theme Integration ---
+@use '@angular/material' as mat; // Keep for potential use of other Material mixins/functions
+
+// --- Variables ---
+// NOTE: Palettes and theme colors should ideally be defined globally
+//       and imported or accessed via CSS variables.
+//       These are hardcoded fallbacks based on the original file's examples
+//       to resolve the compilation error.
+
+// Colors (Hardcoded Fallbacks)
+$primary-color: #673ab7; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 500)
+$primary-color-dark: #512da8; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 700)
+$primary-color-light: #d1c4e9; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 100)
+$accent-color: #ff4081; // Fallback for mat.get-color-from-palette(mat.$pink-palette, A200)
+$text-color-primary: #333;
+$text-color-secondary: #555; // Merged #666 and #555
+$text-color-light: #fff;
+$background-light: #f8f9fa;
+$background-hero: #f8f0fb; // Specific background for hero
+$border-color: rgba(0, 0, 0, 0.1);
+// Chip colors - using hardcoded fallbacks or primary colors
+$chip-hover-bg: #7986cb; // Fallback for indigo-400 (mat.get-color-from-palette(mat.$indigo-palette, 400))
+$chip-selected-bg: $primary-color-dark; // Use defined primary dark
+$chip-selected-hover-bg: #311b92; // Fallback for deep-purple-900 (mat.get-color-from-palette($primary-palette, 900))
+
+// Typography
+$font-size-base: 1rem; // Base font size (usually 16px)
+$font-size-lg: $font-size-base * 1.2;
+$font-size-xl: $font-size-base * 1.5;
+$font-size-xxl: $font-size-base * 2;
+$font-size-xxxl: $font-size-base * 2.5;
+$font-weight-bold: bold;
+
+// Spacing
+$spacing-unit: 1rem; // Base spacing unit (e.g., 16px)
+$padding-section-vertical: $spacing-unit * 3.75; // 60px
+$padding-hero-vertical: $spacing-unit * 5; // 80px
+$gap-base: $spacing-unit * 0.625; // 10px
+$gap-large: $spacing-unit * 1.875; // 30px
+$margin-bottom-base: $spacing-unit * 1.25; // 20px
+$margin-bottom-large: $spacing-unit * 1.875; // 30px
+$margin-bottom-xl: $spacing-unit * 2.5; // 40px
+
+// Borders & Shadows
+$border-radius-base: 5px;
+$box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.05);
+$box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+// --- Base Styles ---
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 ($spacing-unit * 0.9375); // 15px
+}
+
+.section-title {
+  font-size: $font-size-xxxl; // Use variable
+  font-weight: $font-weight-bold;
+  color: $text-color-primary; // Use variable
+  margin-bottom: $margin-bottom-xl; // Use variable
+  text-align: center;
+}
+
+// --- Component Specific Styles ---
+
+// Note: .logo and .nav-links might belong in a separate header/toolbar component's SCSS
+.logo {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  li {
+    margin-left: $margin-bottom-base; // Use variable
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color-light; // Assuming white text on primary toolbar
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color-light; // Use variable
+    }
+  }
+}
+
+.hero {
+  padding: $padding-hero-vertical 0;
+  text-align: center;
+  background-color: $background-hero;
+
+  .hero-title {
+    font-size: $font-size-xxxl;
+    color: $primary-color-dark; // Use variable
+    margin-bottom: $margin-bottom-base;
+  }
+
+  .hero-description {
+    font-size: $font-size-lg;
+    color: $primary-color; // Use variable
+    margin-bottom: $margin-bottom-large;
+  }
+  // Style for the hero button if needed (assuming mat-raised-button)
+  .mat-mdc-raised-button {
+     // Add specific hero button styles if necessary
+  }
+}
+
+.services {
+  padding: $padding-section-vertical 0;
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $gap-large;
+  }
+
+  .service-card {
+    // Use mat-card selector if using <mat-card>
+    &.mat-mdc-card, // Target Angular Material Card
+    &.service-card { // Keep original class for flexibility
+      padding: $margin-bottom-large; // Use variable
+      border-radius: $border-radius-base;
+      box-shadow: $box-shadow-base;
+      background-color: $text-color-light; // Ensure background for shadow
+    }
+
+    .service-title {
+      font-size: $font-size-xl;
+      color: $primary-color; // Use variable (was #3f51b5)
+      margin-bottom: $gap-base; // Use variable
+    }
+
+    .service-description {
+      color: $text-color-secondary; // Use variable
+      line-height: 1.6; // Improve readability
+    }
+  }
+}
+
+.expertise {
+  background-color: $background-light;
+  padding: $padding-section-vertical 0;
+
+  .expertise-chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap-base;
+    margin-top: $margin-bottom-base;
+  }
+
+  // Target the Material chip component directly for better integration
+  .mat-mdc-chip-set .mdc-evolution-chip { // More specific selector for Material chips
+    font-size: $font-size-base * 0.95; // Keep specific size if desired
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 16px; // Standard Material chip radius
+
+    // Hover State
+    &:hover {
+      background-color: $chip-hover-bg; // Use variable
+      color: $text-color-light;
+      transform: scale(1.08);
+      box-shadow: $box-shadow-hover;
+    }
+
+    // Selected State (using Material's selected class or our custom class)
+    &.mdc-evolution-chip--selected, // Material's selected state class
+    &.chip-highlighted { // Our custom class via [ngClass]
+      background-color: $chip-selected-bg; // Use variable
+      // Fallback contrast color - ideally use a theme variable or Material's contrast logic
+      color: $text-color-light; // Was mat.get-color-from-palette($primary-palette, 'default-contrast')
+
+      // Hover while selected
+      &:hover {
+        background-color: $chip-selected-hover-bg; // Use variable
+        // transform: scale(1.1); // Optional: slightly different hover when selected
+      }
+    }
+
+     // Focus state for accessibility
+     &.cdk-focused, // Keyboard focus
+     &:focus {
+        // Use Material's focus indicator or define a custom one
+        // Example: box-shadow: 0 0 0 3px rgba($accent-color, 0.5);
+     }
+  }
+}
+
+.vibe-check {
+  padding: $padding-section-vertical 0;
+  text-align: center;
+
+  .vibe-check-description {
+    font-size: $font-size-lg;
+    color: $text-color-secondary;
+    margin-bottom: $margin-bottom-large;
+    max-width: 700px; // Constrain width for readability
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+}
+
+.contact {
+  padding: $padding-section-vertical 0;
+  text-align: center;
+
+  .contact-button {
+    // Assuming mat-raised-button
+    &.mat-mdc-raised-button {
+      font-size: $font-size-lg;
+      padding: ($spacing-unit * 0.75) ($spacing-unit * 2); // Adjust padding
+    }
+  }
+}
+
+.footer {
+  background-color: $text-color-primary; // Use variable
+  color: $text-color-light;
+  text-align: center;
+  padding: $margin-bottom-base 0;
+  font-size: $font-size-base * 0.9;
+}
