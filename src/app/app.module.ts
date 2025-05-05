@@ -29,6 +29,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MapsDashboardComponent } from './dashboards/maps-dashboard/maps-dashboard.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MapCardComponent } from './cards/map-card/map-card.component';
+import { FooterComponent } from "./footer/footer.component";
 Chart.register(VennDiagramController, ArcSlice);
 @NgModule({
   declarations: [
@@ -54,10 +55,10 @@ Chart.register(VennDiagramController, ArcSlice);
     MonacoEditorModule,
     MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
+        enabled: environment.production,
+        // Register the ServiceWorker as soon as the app is stable
+        // or after 30 seconds (whichever comes first).
+        registrationStrategy: 'registerWhenStable:30000',
     }),
     BrowserAnimationsModule,
     ChartsModule,
@@ -67,7 +68,8 @@ Chart.register(VennDiagramController, ArcSlice);
     MatGridListModule,
     MatMenuModule,
     MatProgressBarModule,
-  ],
+    FooterComponent
+],
   providers: [
     {
       provide: MONACO_PATH,

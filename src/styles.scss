@@ -3,6 +3,47 @@
 @tailwind components;
 @tailwind utilities;
 
+// Colors (Hardcoded Fallbacks)
+$primary-color: #673ab7; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 500)
+$primary-color-dark: #512da8; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 700)
+$primary-color-light: #d1c4e9; // Fallback for mat.get-color-from-palette(mat.$deep-purple-palette, 100)
+$accent-color: #ff4081; // Fallback for mat.get-color-from-palette(mat.$pink-palette, A200)
+$text-color-primary: #333;
+$text-color-secondary: #555; // Merged #666 and #555
+$text-color-light: #fff;
+$background-light: #f8f9fa;
+$background-hero: #f8f0fb; // Specific background for hero
+$border-color: rgba(0, 0, 0, 0.1);
+// Chip colors - using hardcoded fallbacks or primary colors
+$chip-hover-bg: #7986cb; // Fallback for indigo-400 (mat.get-color-from-palette(mat.$indigo-palette, 400))
+$chip-selected-bg: $primary-color-dark; // Use defined primary dark
+$chip-selected-hover-bg: #311b92; // Fallback for deep-purple-900 (mat.get-color-from-palette($primary-palette, 900))
+
+// Typography
+$font-size-base: 1rem; // Base font size (usually 16px)
+$font-size-lg: $font-size-base * 1.2;
+$font-size-xl: $font-size-base * 1.5;
+$font-size-xxl: $font-size-base * 2;
+$font-size-xxxl: $font-size-base * 2.5;
+$font-weight-bold: bold;
+
+// Spacing
+$spacing-unit: 1rem; // Base spacing unit (e.g., 16px)
+$padding-section-vertical: $spacing-unit * 3.75; // 60px
+$padding-hero-vertical: $spacing-unit * 5; // 80px
+$gap-base: $spacing-unit * 0.625; // 10px
+$gap-large: $spacing-unit * 1.875; // 30px
+$margin-bottom-base: $spacing-unit * 1.25; // 20px
+$margin-bottom-large: $spacing-unit * 1.875; // 30px
+$margin-bottom-xl: $spacing-unit * 2.5; // 40px
+
+// Borders & Shadows
+$border-radius-base: 5px;
+$box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.05);
+$box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+
 html,
 body {
   height: 100%;
@@ -11,3 +52,5 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+

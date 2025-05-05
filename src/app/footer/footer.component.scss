@@ -1,0 +1,19 @@
+$text-color-secondary: #555; // Merged #666 and #555
+$text-color-light: #fff;
+
+$spacing-unit: 1rem; // Base spacing unit (e.g., 16px)
+ $margin-bottom-base: 20px; // Margin bottom base (e.g., 32px) 0;
+ $font-size-base: 1rem;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 ($spacing-unit * 0.9375); // 15px
+  }
+
+.footer {
+    background-color: $text-color-secondary; // Use variable
+    color: $text-color-light;
+    text-align: center;
+    padding: $margin-bottom-base 0;
+    font-size: $font-size-base * 0.9;
+  }
